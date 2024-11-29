@@ -1,0 +1,9 @@
+[Unit]
+Description=Force ZFS sync, flush caches, and block devices
+Wants=zfs-flush.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/zfs-flush.sh your-zpool-name
+StandardOutput=journal
+StandardError=journal
