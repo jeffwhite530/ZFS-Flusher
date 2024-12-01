@@ -5,7 +5,12 @@ This project automates the periodic synchronization, cache clearing, and device 
 
 ## Installation
 
-Edit the service file and set the zpool name as the first arg of the script.
+Edit the service file and set the zpool name as the first arg of the script. Alternatively, create `/etc/systemd/system/zfs-flush.service.d/override.conf` with:
+```ini
+[Service]
+ExecStart=
+ExecStart=/usr/local/bin/zfs-flush.sh your_zpool_name
+```
 
 ```shell
 sudo cp zfs-flush.sh /usr/local/bin/
