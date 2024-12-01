@@ -1,5 +1,5 @@
 [Unit]
-Description=Force ZFS sync, flush caches, and block devices
+Description=Force ZFS sync and flush caches
 Wants=zfs-flush.timer
 
 [Service]

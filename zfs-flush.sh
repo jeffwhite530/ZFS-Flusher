@@ -1,9 +1,9 @@
 #!/bin/bash
-# zfs_flush.sh: Force ZFS sync, flush caches, and block devices with extensive logging.
+# zfs-flush.sh: Force ZFS sync and flush cache.
 
 set -euo pipefail
 
-log_file="/var/log/zfs_flush.log"
+log_file="/var/log/zfs-flush.log"
 zfs_pool="${1:-}"  # Pool name passed as an argument.
 
 if [[ -z "$zfs_pool" ]]; then
