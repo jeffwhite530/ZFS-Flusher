@@ -12,6 +12,7 @@ ExecStart=
 ExecStart=/usr/local/bin/zfs-flush.sh your_zpool_name
 ```
 
+Then:
 ```shell
 sudo cp zfs-flush.sh /usr/local/bin/
 sudo chmod +x /usr/local/bin/zfs-flush.sh
